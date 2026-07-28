@@ -1,5 +1,5 @@
-function startGame() {
-    alert("ACHX Moto Challenge boshlandi!");
-}
+const startBtn = document.getElementById("startBtn");
 
-document.getElementById("startBtn").addEventListener("click", startGame);
+startBtn.addEventListener("click", function () {
+    alert("ACHX Moto Challenge boshlandi!");
+});
