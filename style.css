@@ -1,1 +1,26 @@
+body {
+  margin: 0;
+  background: #111;
+  color: white;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
 
+#menu {
+  margin-top: 100px;
+}
+
+h1 {
+  color: #ff3b30;
+  font-size: 40px;
+}
+
+button {
+  width: 200px;
+  height: 55px;
+  background: #ff3b30;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 20px;
+}
