@@ -24,3 +24,9 @@ button {
   border-radius: 10px;
   font-size: 20px;
 }
+#gameCanvas{
+    display:none;
+    background:#555;
+    margin:0 auto;
+    border:2px solid #fff;
+}
