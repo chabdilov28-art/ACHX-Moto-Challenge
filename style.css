@@ -30,3 +30,9 @@ button {
     margin:0 auto;
     border:2px solid #fff;
 }
+#gameCanvas {
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  background: #555;
+}
