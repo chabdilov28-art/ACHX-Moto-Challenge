@@ -2,7 +2,11 @@ const startBtn = document.getElementById("startBtn");
 const menu = document.getElementById("menu");
 const canvas = document.getElementById("gameCanvas");
 const ctx = canvas.getContext("2d");
+const canvas = document.getElementById("gameCanvas");
+const ctx = canvas.getContext("2d");
 
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
 let bike = {
   x: 165,
   y: 520,
