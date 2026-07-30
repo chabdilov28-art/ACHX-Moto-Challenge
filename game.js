@@ -1,64 +1,33 @@
-const startBtn = document.getElementById("startBtn");
 const menu = document.getElementById("menu");
-const canvas = document.getElementById("gameCanvas");
-const ctx = canvas.getContext("2d");
-const canvas = document.getElementById("gameCanvas");
-const ctx = canvas.getContext("2d");
+const game = document.getElementById("game");
+const playBtn = document.getElementById("playBtn");
 
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
-let bike = {
-  x: 165,
-  y: 520,
-  w: 30,
-  h: 60
-};
+playBtn.addEventListener("click", () => {
 
-startBtn.onclick = function () {
-  menu.style.display = "none";
-  canvas.style.display = "block";
-  gameLoop();
-};
+    menu.style.display = "none";
+    game.style.display = "block";
 
-function drawRoad() {
-  ctx.fillStyle = "#555";
-  ctx.fillRect(0, 0, canvas.width, canvas.height);
+    game.width = window.innerWidth;
+    game.height = window.innerHeight;
 
-  ctx.strokeStyle = "white";
-  ctx.lineWidth = 4;
+    const ctx = game.getContext("2d");
 
-  for (let y = 0; y < canvas.height; y += 40) {
-    ctx.beginPath();
-    ctx.moveTo(canvas.width / 2, y);
-    ctx.lineTo(canvas.width / 2, y + 20);
-    ctx.stroke();
-  }
-}
+    function gameLoop() {
 
-function drawBike() {
-  ctx.fillStyle = "red";
-  ctx.fillRect(bike.x, bike.y, bike.w, bike.h);
-}
+        ctx.fillStyle = "#222";
+        ctx.fillRect(0, 0, game.width, game.height);
 
-function gameLoop() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
+        ctx.fillStyle = "red";
+        ctx.font = "40px Arial";
+        ctx.fillText("ACHX MOTO DEMO", 50, 80);
 
-  drawRoad();
-  drawBike();
+        ctx.fillStyle = "white";
+        ctx.font = "24px Arial";
+        ctx.fillText("Moto Challenge boshlanmoqda...", 50, 130);
 
-  requestAnimationFrame(gameLoop);
-}
+        requestAnimationFrame(gameLoop);
+    }
 
-document.addEventListener("touchstart", function(e) {
-  let x = e.touches[0].clientX;
+    gameLoop();
 
-  if (x < window.innerWidth / 2) {
-    bike.x -= 20;
-  } else {
-    bike.x += 20;
-  }
-
-  if (bike.x < 0) bike.x = 0;
-  if (bike.x > canvas.width - bike.w)
-    bike.x = canvas.width - bike.w;
 });
