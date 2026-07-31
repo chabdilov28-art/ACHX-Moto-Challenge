@@ -1,33 +1,154 @@
 <!DOCTYPE html>
 <html lang="uz">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ACHX Moto Challenge</title>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-<link rel="stylesheet" href="style.css">
+    <title>ACHX Moto Challenge</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;800&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
-<div id="menu">
-    <h1>ACHX</h1>
-    <h2>MOTO CHALLENGE</h2>
+<div id="loadingScreen">
 
-    <button id="playBtn">▶ PLAY</button>
+    <div class="logoBox">
+
+        <h1>
+            <span class="red">ACHX</span>
+            <span class="white">MOTO</span>
+        </h1>
+
+        <h2>CHALLENGE</h2>
+
+        <div class="loadingBar">
+
+            <div id="loadingFill"></div>
+
+        </div>
+
+        <p id="loadingText">
+            Loading...
+        </p>
+
+    </div>
+
+</div>
+
+<div id="menu">
+
+    <div class="backgroundBlur"></div>
+
+    <header>
+
+        <h1>
+
+            <span class="red">ACHX</span>
+
+            Moto Challenge
+
+        </h1>
+
+        <p>
+
+            Professional 2.5D Motorcycle Game
+
+        </p>
+
+    </header>
+
+    <section class="menuButtons">
+
+        <button id="playBtn">
+
+            ▶ PLAY
+
+        </button>
+
+        <button id="garageBtn">
+
+            🏍 GARAGE
+
+        </button>
+
+        <button id="levelBtn">
+
+            🏆 LEVELS
+
+        </button>
+
+        <button id="settingsBtn">
+
+            ⚙ SETTINGS
+
+        </button>
+
+        <button id="aboutBtn">
+
+            ℹ ABOUT
+
+        </button>
+
+    </section>
+
 </div>
 
 <div id="game">
-    <canvas id="canvas"></canvas>
+
+    <canvas id="gameCanvas"></canvas>
 
     <div id="hud">
-        <span>🪙 <span id="coin">0</span></span>
-        <span>⭐ <span id="level">1</span></span>
+
+        <div class="hudLeft">
+
+            <div class="box">
+
+                ❤️
+
+                <span id="hp">
+
+                    100
+
+                </span>
+
+            </div>
+
+            <div class="box">
+
+                🪙
+
+                <span id="coins">
+
+                    0
+
+                </span>
+
+            </div>
+
+        </div>
+
+        <div class="hudRight">
+
+            <div class="box">
+
+                SCORE
+
+                <span id="score">
+
+                    0
+
+                </span>
+
+            </div>
+
+        </div>
+
     </div>
-
-    <button id="backBtn">← MENU</button>
-</div>
-
-<script src="game.js"></script>
-
-</body>
-</html>
