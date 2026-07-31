@@ -474,3 +474,93 @@
         </div>
 
     </div>
+<!-- 5-QISM: GAME HUD -->
+
+<div id="hud">
+
+    <div id="score">
+        Score: 0
+    </div>
+
+    <div id="speed">
+        Speed: 0 km/h
+    </div>
+
+</div>
+
+
+<div id="controls">
+
+    <button id="leftBtn">
+        ◀
+    </button>
+
+    <button id="rightBtn">
+        ▶
+    </button>
+
+    <button id="gasBtn">
+        GAS
+    </button>
+
+    <button id="brakeBtn">
+        BRAKE
+    </button>
+
+</div>
+
+
+<script>
+
+let score = 0;
+let speed = 0;
+
+const scoreText = document.getElementById("score");
+const speedText = document.getElementById("speed");
+
+const gasBtn = document.getElementById("gasBtn");
+const brakeBtn = document.getElementById("brakeBtn");
+
+
+gasBtn.onclick = function(){
+
+    speed += 5;
+
+    if(speed > 200){
+        speed = 200;
+    }
+
+    speedText.innerHTML =
+    "Speed: " + speed + " km/h";
+
+};
+
+
+brakeBtn.onclick = function(){
+
+    speed -= 10;
+
+    if(speed < 0){
+        speed = 0;
+    }
+
+    speedText.innerHTML =
+    "Speed: " + speed + " km/h";
+
+};
+
+
+function addScore(){
+
+    score++;
+
+    scoreText.innerHTML =
+    "Score: " + score;
+
+}
+
+
+setInterval(addScore,1000);
+
+
+</script>
