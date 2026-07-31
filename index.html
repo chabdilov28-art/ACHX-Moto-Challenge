@@ -1,4 +1,56 @@
-    <div id="pauseMenu" class="popup hidden">
+    <div id="levelComplete" class="popup hidden">
+
+        <div class="popupCard">
+
+            <h2>LEVEL COMPLETE</h2>
+
+            <p>Excellent Ride!</p>
+
+            <button id="nextLevelBtn">
+                NEXT LEVEL
+            </button>
+
+            <button id="levelMenuBtn">
+                MAIN MENU
+            </button>
+
+        </div>
+
+    </div>
+
+    <div id="aboutPage" class="popup hidden">
+
+        <div class="popupCard">
+
+            <h2>ABOUT</h2>
+
+            <p>
+                ACHX Moto Challenge
+            </p>
+
+            <p>
+                Professional 2.5D Motorcycle Game
+            </p>
+
+            <p>
+                Version 1.0
+            </p>
+
+            <button id="aboutBackBtn">
+                BACK
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="game.js"></script>
+
+</body>
+
+</html>    <div id="pauseMenu" class="popup hidden">
 
         <div class="popupCard">
 
@@ -240,7 +292,138 @@
 
 </div>
 
-<div id="game">
+<div id="game">    <!-- TOUCH CONTROLS -->
+
+    <div id="touchControls">
+
+        <button id="leftBtn" class="touchBtn">
+            ◀
+        </button>
+
+        <button id="rightBtn" class="touchBtn">
+            ▶
+        </button>
+
+        <button id="brakeBtn" class="touchBtn redBtn">
+            BRAKE
+        </button>
+
+        <button id="gasBtn" class="touchBtn greenBtn">
+            GAS
+        </button>
+
+        <button id="jumpBtn" class="touchBtn blueBtn">
+            JUMP
+        </button>
+
+    </div>
+
+    <!-- SPEEDOMETER -->
+
+    <div id="speedometer">
+
+        <span id="speedValue">
+
+            0
+
+        </span>
+
+        <small>
+
+            KM/H
+
+        </small>
+
+    </div>
+
+    <!-- FPS -->
+
+    <div id="fpsCounter">
+
+        FPS :
+        <span id="fps">
+
+            60
+
+        </span>
+
+    </div>
+
+    <!-- LEVEL -->
+
+    <div id="levelBox">
+
+        LEVEL
+
+        <span id="level">
+
+            1
+
+        </span>
+
+    </div>
+
+    <!-- ACHIEVEMENT -->
+
+    <div id="achievement" class="hidden">
+
+        <h3>
+
+            ACHIEVEMENT
+
+        </h3>
+
+        <p id="achievementText">
+
+            Welcome Rider
+
+        </p>
+
+    </div>
+
+    <!-- NOTIFICATION -->
+
+    <div id="notification" class="hidden">
+
+        <span id="notificationText">
+
+            Ready...
+
+        </span>
+
+    </div>
+
+    <!-- PAUSE BUTTON -->
+
+    <button id="pauseButton">
+
+        ⏸
+
+    </button>
+
+    <!-- MINIMAP -->
+
+    <div id="miniMap">
+
+        <div id="playerDot"></div>
+
+    </div>
+
+    <!-- FINISH -->
+
+    <div id="finishBanner" class="hidden">
+
+        FINISH
+
+    </div>
+
+    <!-- COUNTDOWN -->
+
+    <div id="countdown" class="hidden">
+
+        3
+
+    </div>
 
     <canvas id="gameCanvas"></canvas>
 
