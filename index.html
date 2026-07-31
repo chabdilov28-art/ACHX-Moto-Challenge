@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uz">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,24 +7,27 @@
 
 <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
 <div id="menu">
+    <h1>ACHX</h1>
+    <h2>MOTO CHALLENGE</h2>
 
-<h1>ACHX MOTO</h1>
-
-<h2>CHALLENGE</h2>
-
-<button id="playBtn">
-START
-</button>
-
+    <button id="playBtn">▶ PLAY</button>
 </div>
 
-<canvas id="game"></canvas>
+<div id="game">
+    <canvas id="canvas"></canvas>
 
-<script src="games.js"></script> 
+    <div id="hud">
+        <span>🪙 <span id="coin">0</span></span>
+        <span>⭐ <span id="level">1</span></span>
+    </div>
+
+    <button id="backBtn">← MENU</button>
+</div>
+
+<script src="game.js"></script>
 
 </body>
 </html>
