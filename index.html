@@ -564,3 +564,98 @@ setInterval(addScore,1000);
 
 
 </script>
+<!-- 6-QISM: MOTORCYCLE MOVEMENT -->
+
+<script>
+
+let bike = {
+    x: 200,
+    y: 400,
+    width: 50,
+    height: 80,
+    color: "red",
+    speed: 5
+};
+
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
+
+
+function drawBike(){
+
+    ctx.fillStyle = bike.color;
+
+    ctx.fillRect(
+        bike.x,
+        bike.y,
+        bike.width,
+        bike.height
+    );
+
+
+    ctx.fillStyle = "black";
+
+    ctx.beginPath();
+    ctx.arc(
+        bike.x + 10,
+        bike.y + 80,
+        10,
+        0,
+        Math.PI * 2
+    );
+    ctx.fill();
+
+
+    ctx.beginPath();
+    ctx.arc(
+        bike.x + 40,
+        bike.y + 80,
+        10,
+        0,
+        Math.PI * 2
+    );
+    ctx.fill();
+
+}
+
+
+document.addEventListener("keydown", function(e){
+
+    if(e.key === "ArrowLeft"){
+        bike.x -= bike.speed;
+    }
+
+    if(e.key === "ArrowRight"){
+        bike.x += bike.speed;
+    }
+
+    if(e.key === "ArrowUp"){
+        bike.y -= bike.speed;
+    }
+
+    if(e.key === "ArrowDown"){
+        bike.y += bike.speed;
+    }
+
+});
+
+
+function gameUpdate(){
+
+    ctx.clearRect(
+        0,
+        0,
+        canvas.width,
+        canvas.height
+    );
+
+    drawBike();
+
+    requestAnimationFrame(gameUpdate);
+
+}
+
+
+gameUpdate();
+
+</script>
